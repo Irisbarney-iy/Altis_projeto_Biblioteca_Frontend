@@ -1,1 +1,26 @@
+# Build Tools
+target/
+build/
+.gradle/
+*.jar
+*.class
+
+# IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+
+# Lombok
+.apt_generated
+.factorypath
+
+# Sensitive Files
 .env
+*.log
+*.tmp
+*.bak
