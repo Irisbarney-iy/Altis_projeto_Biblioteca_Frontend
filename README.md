@@ -1,13 +1,34 @@
 Altis Lab+ Library Management 
 
+Project personal name: BibliotecaBooks
+
 Technology Stack
 
-. Java 17
-. Spring Boot 3.4.5
-. Oracle Database 21c Express Edition
-. Flyway (Database Migrations)
-. Project Lombok
-. Spring Doc (OpenAPI Documentation)
-. Json Web Token
+- HTML5
+- CSS3
+- JavaScript
 
-Project personal name: BibliotecaBooks
+Functionalitys/Tabs
+
+- Cadastro and Login
+- Dashboard
+- Livros
+- Usuários
+- Empréstimos
+- Editoras
+- CRUD functional, but for now using localStorage
+
+Structure of the repository
+
+- assets/
+- css/
+- js/
+- pages/
+
+Execute
+
+- Open this project in VSCode and use Live Server on index.html
+
+Backend
+
+- Will be done in the future.
