@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter, sans-serif;
+}
+
+.content{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.banner, .login{
+    flex: 1;
+    height: 100%
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #B15505;
+}
+
+.logo-text{
+    font-size: 50px;
+    color: #FFF3D8;
+    font-weight: 700;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #FFF3D8;
+    border-top: 5px solid #B15505;
+    border-right: 5px solid #B15505;
+    border-bottom: 5px solid #B15505;
+}
+
+.texto-inputs{
+    color: #B15505;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-email{
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #FFFBEC;
+    font-size: 14px;
+}
+
+.input-senha{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #FFFBEC;
+    font-size: 14px;
+}
+
+.input-lembrar{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #B15505;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+
+.esqueceu-senha{
+    color: #b155058b;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.esqueceu-senha:hover{
+    text-decoration: underline;
+}
+
+.texto-lembrar{
+    color: #B15505;
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 100px;
+}
+
+.btn-fazer-login{
+    padding: 10px 20px;
+    width: 30%;
+    background-color: #B15505;
+    color: #FFF3D8;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn-limpar{
+    padding: 10px 20px;
+    width: 30%;
+    background-color: #FFF3D8;
+    color: #B15505;
+    border: 2px solid #B15505;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cadastrar{
+    margin-top: 20px;
+    color: #b155058b;
+    font-size: 18px;
+}
+
+form{
+    width: 90%;
+}
+
+h1{
+    color: #B15505;
+    font-size: 30px;
+    margin-bottom: 80px;
+}
+
+a{
+    color: #b155058b;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
