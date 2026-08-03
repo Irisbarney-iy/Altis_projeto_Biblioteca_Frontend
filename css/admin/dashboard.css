@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter, sans-serif;
+}
+
+.content{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 10vh 90vh;
+    grid-template-areas: 
+        "header header"
+        "menu main";
+}
+
+.header{
+    background-color: #8b1515;
+    grid-area: header;
+}
+
+.btn-logout{
+    background-color: #4fb134;
+    color: #FFFBEC;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.menu{
+    background-color: aqua;
+    grid-area: menu;
+}
+
+.main{
+    padding: 2rem;
+    background-color: #B15505;
+    grid-area: main;
+}

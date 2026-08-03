@@ -11,7 +11,7 @@
     min-height: 100vh;
 }
 
-.login{
+.register{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@
     background-color: #FFF3D8;
 }
 
-.login h1{
+.register h1{
     color: #B15505;
     font-size: 32px;
     margin-bottom: 45px;
@@ -46,14 +46,6 @@
     font-weight: bold;
 }
 
-.fa-eye{
-    position: absolute;
-    top: 49%;
-    right: 7%;
-    cursor: pointer;
-    color: #B15505;
-}
-
 .input-entrada{
     padding: 10px;
     width: 100%;
@@ -72,43 +64,6 @@
     font-size: 14px;
 }
 
-.esqueceu-senha a{
-    color: #b15505b1;
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.esqueceu-senha a:hover{
-    text-decoration: underline;
-}
-
-.lembrar-me{
-    margin-top: 20px;
-    font-size: 14px;
-    color: #B15505;
-}
-
-.lembrar-me input{
-    cursor: pointer;
-    margin-right: 5px;
-    appearance: none;
-    background-color: #FFF3D8;
-    border: 2px solid #B15505;
-    width: 20px;
-    height: 20px;
-}
-
-.lembrar-me input:checked{
-    background-color: #B15505;
-}
-
-.lembrar-me label{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
 .btns{
     display: flex;
     justify-content: space-around;
@@ -116,7 +71,7 @@
     margin-top: 20px;
 }
 
-.btn-limpar, .btn-logar{
+.btn-limpar, .btn-cadastrar{
     padding: 10px 20px;
     width: 30%;
     border-radius: 15px;
@@ -130,7 +85,7 @@
     border: 2px solid #B15505;
 }
 
-.btn-logar{
+.btn-cadastrar{
     background-color: #B15505;
     color: #FFF3D8;
     border: 2px solid #B15505;
