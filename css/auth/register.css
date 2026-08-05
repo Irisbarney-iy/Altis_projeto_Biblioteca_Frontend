@@ -19,6 +19,9 @@
     width: 100%;
     padding: 30px;
     background-color: #FFF3D8;
+    border-top: solid 6px #B15505;
+    border-left: solid 6px #B15505;
+    border-bottom: solid 6px #B15505;
 }
 
 .register h1{
