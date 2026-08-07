@@ -27,13 +27,15 @@
             <h1>Bem vindo de volta!</h1>
             <form class="inputs-form">
                 <div class="inputs">
-                    <label class="texto-inputs" for="email">Email</label>
+                    <label class="text-inputs" for="email">Email</label>
                     <input class="input-entrada" id="email" type="email" name="email" placeholder="Insira seu email" required>
                 </div>
                 <div class="inputs">
-                    <label class="texto-inputs" for="senha">Senha</label>
-                    <i class="fa fa-eye" aria-hidden="true"></i>
-                    <input class="input-entrada" id="senha" type="password" name="senha" placeholder="Insira sua senha" required>
+                    <label class="text-inputs" for="senha">Senha</label>
+                    <div class="input-container">
+                        <input class="input-entrada" id="password" type="password" name="senha" placeholder="Insira sua senha" required>
+                        <button class="ocult-button" id="ocult-button-functional" type="button"><img class="ocult-icon" id="ocult-icon-image" src="../../assets/icons/Invisible.svg"></button>
+                    </div>
                 </div>
                 <div class="esqueceu-senha">
                     <a href="../../pages/auth/forgot-password.html">Esqueceu sua senha?</a>

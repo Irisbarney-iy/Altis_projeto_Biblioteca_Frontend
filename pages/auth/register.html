@@ -10,7 +10,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../../assets/favicons/android-chrome-512x512.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../../css/auth/register.css">
     <title>BibliotecaBooks</title>
@@ -34,7 +33,7 @@
                 </div>
                 <div class="inputs">
                     <label class="texto-inputs" for="data-nascimento">Data de Nascimento</label>
-                    <input class="input-entrada" id="data-nascimento" type="text" name="data-nascimento" placeholder="__/__/____" required>
+                    <input class="input-entrada" id="data-nascimento" type="date" name="data-nascimento" placeholder="__/__/____" required>
                 </div>
                 <div class="inputs">
                     <label class="texto-inputs" for="endereco">Endereço</label>
@@ -42,11 +41,17 @@
                 </div>
                 <div class="inputs">
                     <label class="texto-inputs" for="senha">Senha</label>
-                    <input class="input-entrada" id="senha" type="password" name="senha" placeholder="Insira sua senha" required>
+                    <div class="input-container">
+                        <input class="input-entrada" id="password" type="password" name="senha" placeholder="Insira sua senha" required>
+                        <button class="ocult-button" id="ocult-button-functional" type="button"><img class="ocult-icon" id="ocult-icon-image" src="../../assets/icons/Invisible.svg"></button>
+                    </div>
                 </div>
                 <div class="inputs">
                     <label class="texto-inputs" for="confirmar-senha">Confirme sua senha</label>
-                    <input class="input-entrada" id="confirmar-senha" type="password" name="confirmar-senha" placeholder="Confirme sua senha" required>
+                    <div class="input-container">
+                        <input class="input-entrada" id="confirm-password" type="password" name="confirmar-senha" placeholder="Confirme sua senha" required>
+                        <button class="ocult-button" id="ocult-button-functional-confirm" type="button"><img class="ocult-icon-confirm" id="ocult-icon-image-confirm" src="../../assets/icons/Invisible.svg"></button>
+                    </div>
                 </div>
                 <div class="btns">
                     <button class="btn-limpar" type="reset">Limpar</button>

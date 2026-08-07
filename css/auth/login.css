@@ -42,19 +42,30 @@
     flex-direction: column;
 }
 
-.texto-inputs{
+.text-inputs{
     color: #B15505;
     font-size: 16px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-.fa-eye{
+.input-container{
+    position: relative;
+}
+
+.ocult-button{
     position: absolute;
-    top: 49%;
-    right: 7%;
-    cursor: pointer;
-    color: #B15505;
+    border: none;
+    background-color: transparent;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-60%);
+
+}
+
+.ocult-icon{
+    width: 20px;
+    right: 12px;
 }
 
 .input-entrada{

@@ -1,3 +1,4 @@
+// parte de verificação se o usuário existe
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.inputs-form');
 
@@ -5,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         const email = document.getElementById('email').value;
-        const senha = document.getElementById('senha').value;
+        const password = document.getElementById('password').value;
 
         const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-        const usuarioLogado = usuarios.find(user => user.email === email && user.senha === senha);
+        const usuarioLogado = usuarios.find(user => user.email === email && user.password === password);
 
         if(usuarioLogado){
             localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
@@ -19,16 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// botão de ocultar e ver a senha (Vou ajustar depois, porque fica quebrado e acabei aprendendo num vídeo)
-let eyeIcon = document.querySelector('.fa-eye');
+// parte do botão de ocultar e mostrar as informações
+const inputPassword = document.getElementById('password');
+const ocult = document.getElementById('ocult-button-functional');
+const ocultIcon = document.getElementById('ocult-icon-image');
 
-eyeIcon.addEventListener('click', ()=>{
-    let inputSenha = document.querySelector('#senha')
-
-    if(inputSenha.getAttribute('type') == 'password'){
-        inputSenha.setAttribute('type', 'text');
+ocult.addEventListener('click', ()=>{
+    if(inputPassword.type === 'password'){
+        inputPassword.type = 'text'
+        ocultIcon.src = '../../assets/icons/visible.svg'
     } else{
-        inputSenha.setAttribute('type', 'password');
+        inputPassword.type = 'password'
+        ocultIcon.src = '../../assets/icons/invisible.svg'
     }
 });
-
