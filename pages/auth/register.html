@@ -21,15 +21,15 @@
             <form class="inputs-form">
                 <div class="inputs">
                     <label class="text-inputs" for="name">Nome completo</label>
-                    <input class="entry-input" id="name" type="text" name="name" placeholder="Insira seu nome" required>
+                    <input class="entry-input" id="name" type="text" name="name" minlength="3" maxlength="100" placeholder="Insira seu nome" required>
                 </div>
                 <div class="inputs">
                     <label class="text-inputs" for="email">Email</label>
-                    <input class="entry-input" id="email" type="email" name="email" placeholder="Insira seu email" required>
+                    <input class="entry-input" id="email" type="email" pattern="^[a-zA-Z0-9]+@gmail\.com$" name="email" minlength="6" maxlength="255" placeholder="Insira seu email (@gmail.com)" required>
                 </div>
                 <div class="inputs">
                     <label class="text-inputs" for="cpf">CPF</label>
-                    <input class="entry-input" id="cpf" type="text" name="cpf" placeholder="___.___.___-__" required>
+                    <input class="entry-input" id="cpf" type="text" name="cpf" maxlength="14" autocomplete="off" placeholder="___.___.___-__" required>
                 </div>
                 <div class="inputs">
                     <label class="text-inputs" for="date-birth">Data de Nascimento</label>
@@ -42,7 +42,7 @@
                 <div class="inputs">
                     <label class="text-inputs" for="password">Senha</label>
                     <div class="input-container">
-                        <input class="entry-input" id="password" type="password" name="password" placeholder="Insira sua senha" required>
+                        <input class="entry-input" id="password" type="password" name="password" minlength="8" maxlength="15" placeholder="Insira sua senha" required>
                         <button class="ocult-button" id="ocult-button-functional" type="button"><img class="ocult-icon" id="ocult-icon-image" src="../../assets/icons/Invisible.svg"></button>
                     </div>
                 </div>

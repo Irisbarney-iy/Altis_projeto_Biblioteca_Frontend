@@ -27,12 +27,12 @@
             <form class="inputs-form">
                 <div class="inputs">
                     <label class="text-inputs" for="email">Email</label>
-                    <input class="entry-input" id="email" type="email" name="email" placeholder="Insira seu email" required>
+                    <input class="entry-input" id="email" type="email" name="email" minlength="6" maxlength="255" placeholder="Insira seu email" required>
                 </div>
                 <div class="inputs">
                     <label class="text-inputs" for="password">Senha</label>
                     <div class="input-container">
-                        <input class="entry-input" id="password" type="password" name="password" placeholder="Insira sua senha" required>
+                        <input class="entry-input" id="password" type="password" name="password" minlength="8" maxlength="15" placeholder="Insira sua senha" required>
                         <button class="ocult-button" id="ocult-button-functional" type="button"><img class="ocult-icon" id="ocult-icon-image" src="assets/icons/Invisible.svg"></button>
                     </div>
                 </div>

@@ -34,6 +34,36 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 });
 
+
+// parte de máscara do cpf
+const cpfInput = document.getElementById('cpf');
+
+cpfInput.addEventListener('input', () => {
+    let cpf = cpfInput.value.replace(/\D/g, '');
+
+    if(cpf.length > 11){
+        cpf.slice(0, 11);
+    }
+    else if(cpf.length >= 10){
+        cpf = cpf.slice(0, 3) + '.' +
+        cpf.slice(3, 6) + '.' +
+        cpf.slice(6, 9) + '-' +
+        cpf.slice(9, 11);
+    }
+    else if(cpf.length >= 7){
+        cpf = cpf.slice(0, 3) + '.' +
+        cpf.slice(3, 6) + '.' +
+        cpf.slice(6);
+    }
+    else if(cpf.length >= 4){
+        cpf = cpf.slice(0, 3) + '.' +
+        cpf.slice(3);
+    }
+
+    cpfInput.value = cpf;
+
+});
+
 // parte do botão de ocultar e mostrar as informações
 const inputPassword = document.getElementById('password');
 const ocult = document.getElementById('ocult-button-functional');
