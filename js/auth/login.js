@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-        const usuarioLogado = usuarios.find(user => user.email === email && user.password === password);
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const loggedUser = users.find(user => user.email === email && user.password === password);
 
-        if(usuarioLogado){
-            localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
+        if(loggedUser){
+            localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
             window.location.href = '../admin/dashboard.html'
         }else{
             alert('Email ou senha incorretos!')

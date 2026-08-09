@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
 
-    if (!usuarioLogado) {
+    if (!loggedUser) {
         alert('Você precisa fazer login para acessar o Dashboard');
         window.location.href = '../auth/login.html';
         return; 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnLogout = document.querySelector('.btn-logout');
     btnLogout.addEventListener('click', () => {
-        localStorage.removeItem('usuarioLogado');
+        localStorage.removeItem('loggedUser');
         window.location.href = '../auth/login.html';
     });
 });

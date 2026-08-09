@@ -1,37 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.inputs-form');
-    const btnCancelar = document.querySelector('.btn-cancelar');
+    const btnCancel = document.querySelector('.btn-cancel');
 
-    const emailRecuperacao = localStorage.getItem('emailParaRecuperacao');
-    if (!emailRecuperacao) {
+    const recuperyEmailtoChange = localStorage.getItem('recuperyEmail');
+    if (!recuperyEmailtoChange) {
         alert('Você precisa validar primeiro');
         window.location.href = 'forgot-password.html';
     }
 
-    btnCancelar.addEventListener('click', () => {
-        localStorage.removeItem('emailParaRecuperacao');
+    btnCancel.addEventListener('click', () => {
+        localStorage.removeItem('recuperyEmail');
         window.location.href = 'login.html';
     });
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const novaSenha = document.getElementById('password').value;
-        const confirmarNovaSenha = document.getElementById('confirm-password').value;
+        const newPassword = document.getElementById('password').value;
+        const passwordConfirm = document.getElementById('confirm-password').value;
 
-        if (novaSenha !== confirmarNovaSenha) {
+        if (newPassword !== passwordConfirm) {
             alert('As senhas são diferentes');
             return;
         }
 
-        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-        const index = usuarios.findIndex(user => user.email === emailRecuperacao);
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        const index = users.findIndex(user => user.email === recuperyEmailtoChange);
 
         if (index !== -1) {
-            usuarios[index].senha = novaSenha;
+            users[index].senha = newPassword;
             
-            localStorage.setItem('usuarios', JSON.stringify(usuarios));
-            localStorage.removeItem('emailParaRecuperacao');
+            localStorage.setItem('users', JSON.stringify(users));
+            localStorage.removeItem('recuperyEmail');
 
             alert('Senha alterada');
             window.location.href = 'login.html';

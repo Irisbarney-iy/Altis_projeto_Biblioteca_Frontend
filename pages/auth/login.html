@@ -10,7 +10,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../../assets/favicons/android-chrome-512x512.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../../css/auth/login.css">
     <title>BibliotecaBooks</title>
@@ -19,8 +18,8 @@
     <main class="content">
         <section class="banner">
             <div class="banner-content">
-                <img src="../../assets/icons/book-hardcover-open-svgrepo-com.svg" alt="Banner da BibliotecaBooks">
-                <h1 class="logo-text">BibliotecaBooks</h1>
+                <img src="../../assets/icons/book.svg" alt="Banner da BibliotecaBooks">
+                <h1 class="logotype-text">BibliotecaBooks</h1>
             </div>
         </section>
         <section class="login">
@@ -28,27 +27,27 @@
             <form class="inputs-form">
                 <div class="inputs">
                     <label class="text-inputs" for="email">Email</label>
-                    <input class="input-entrada" id="email" type="email" name="email" placeholder="Insira seu email" required>
+                    <input class="entry-input" id="email" type="email" name="email" placeholder="Insira seu email" required>
                 </div>
                 <div class="inputs">
-                    <label class="text-inputs" for="senha">Senha</label>
+                    <label class="text-inputs" for="password">Senha</label>
                     <div class="input-container">
-                        <input class="input-entrada" id="password" type="password" name="senha" placeholder="Insira sua senha" required>
+                        <input class="entry-input" id="password" type="password" name="password" placeholder="Insira sua senha" required>
                         <button class="ocult-button" id="ocult-button-functional" type="button"><img class="ocult-icon" id="ocult-icon-image" src="../../assets/icons/Invisible.svg"></button>
                     </div>
                 </div>
-                <div class="esqueceu-senha">
+                <div class="forget-password">
                     <a href="../../pages/auth/forgot-password.html">Esqueceu sua senha?</a>
                 </div>
-                <div class="lembrar-me">
-                    <label for="lembrar-me">
-                        <input type="checkbox" id="lembrar-me" name="lembrar-me">
+                <div class="remember">
+                    <label for="remember">
+                        <input type="checkbox" id="remember" name="remember">
                         Lembrar-me
                     </label>
                 </div>
                 <div class="btns">
-                    <button class="btn-limpar" type="reset">Limpar</button>
-                    <button class="btn-logar" type="submit">Fazer login</button>
+                    <button class="btn-clear" type="reset">Limpar</button>
+                    <button class="btn-login" type="submit">Fazer login</button>
                 </div>
             </form>
             <p class="login-link">Ainda não tem uma conta? <a href="../../pages/auth/register.html">Cadastre-se</a></p>

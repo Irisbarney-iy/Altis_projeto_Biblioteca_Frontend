@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const form = document.querySelector('.inputs-form');
-    const btnCancelar = document.querySelector('.btn-cancelar');
+    const btnCancelar = document.querySelector('.btn-cancel');
 
     btnCancelar.addEventListener('click', ()=>{
         window.location.href = 'login.html';
@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         const email = document.getElementById('email').value;
         const cpf = document.getElementById('cpf').value;
-        const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-        const usuarioValido = usuarios.find(user => user.email === email && user.cpf === cpf);
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const validUser = users.find(user => user.email === email && user.cpf === cpf);
 
-        if(usuarioValido){
-            localStorage.setItem('emailParaRecuperacao', email);
+        if(validUser){
+            localStorage.setItem('recuperyEmail', email);
             window.location.href = 'change-password.html';
         }else {
             alert('Dados não válidos');

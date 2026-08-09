@@ -42,7 +42,7 @@
     flex-direction: column;
 }
 
-.texto-inputs{
+.text-inputs{
     color: #B15505;
     font-size: 16px;
     margin-bottom: 10px;
@@ -69,7 +69,7 @@
 }
 
 
-.input-entrada{
+.entry-input{
     padding: 10px;
     width: 100%;
     height: 28px;
@@ -82,7 +82,7 @@
     outline: none;
 }
 
-.input-entrada::placeholder{
+.entry-input::placeholder{
     color: #b15505b4;
     font-size: 14px;
 }
@@ -94,7 +94,7 @@
     margin-top: 20px;
 }
 
-.btn-limpar, .btn-cadastrar{
+.btn-clear, .btn-register{
     padding: 10px 20px;
     width: 30%;
     border-radius: 15px;
@@ -102,13 +102,13 @@
     cursor: pointer;
 }
 
-.btn-limpar{
+.btn-clear{
     background-color: #FFF3D8;
     color: #B15505;
     border: 2px solid #B15505;
 }
 
-.btn-cadastrar{
+.btn-register{
     background-color: #B15505;
     color: #FFF3D8;
     border: 2px solid #B15505;
@@ -142,14 +142,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 200px;
+    align-items: center;
+    margin-bottom: 100px;
 }
 
-.logo-text{
+.logotype-text{
     color: #FFF3D8;
     font-size: 38px;
 }
 
 img{
-    width: auto;
+    width: 200px;
 }
