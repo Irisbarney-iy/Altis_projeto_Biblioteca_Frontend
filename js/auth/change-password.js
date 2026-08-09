@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnCancel.addEventListener('click', () => {
         localStorage.removeItem('recuperyEmail');
-        window.location.href = 'login.html';
+        window.location.href = '../../index.html';
     });
 
     form.addEventListener('submit', (event) => {
@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const index = users.findIndex(user => user.email === recuperyEmailtoChange);
 
         if (index !== -1) {
-            users[index].senha = newPassword;
+            users[index].password = newPassword;
             
             localStorage.setItem('users', JSON.stringify(users));
             localStorage.removeItem('recuperyEmail');
 
             alert('Senha alterada');
-            window.location.href = 'login.html';
+            window.location.href = '../../index.html';
         }
     });
 });

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         localStorage.setItem('users', JSON.stringify(users));
 
         alert('Cadastro feito')
-        window.location.href = 'login.html';
+        window.location.href = '../../index.html';
     });
 });
 

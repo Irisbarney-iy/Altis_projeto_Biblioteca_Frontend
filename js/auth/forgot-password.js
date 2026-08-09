@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const btnCancelar = document.querySelector('.btn-cancel');
 
     btnCancelar.addEventListener('click', ()=>{
-        window.location.href = 'login.html';
+        window.location.href = '../../index.html';
     });
 
     form.addEventListener('submit', (event)=>{

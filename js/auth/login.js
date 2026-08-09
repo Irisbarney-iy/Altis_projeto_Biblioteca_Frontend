@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if(loggedUser){
             localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
-            window.location.href = '../admin/dashboard.html'
+            window.location.href = 'pages/admin/dashboard.html'
         }else{
             alert('Email ou senha incorretos!')
         }
@@ -28,9 +28,9 @@ const ocultIcon = document.getElementById('ocult-icon-image');
 ocult.addEventListener('click', ()=>{
     if(inputPassword.type === 'password'){
         inputPassword.type = 'text'
-        ocultIcon.src = '../../assets/icons/visible.svg'
+        ocultIcon.src = 'assets/icons/visible.svg'
     } else{
         inputPassword.type = 'password'
-        ocultIcon.src = '../../assets/icons/invisible.svg'
+        ocultIcon.src = 'assets/icons/invisible.svg'
     }
 });
