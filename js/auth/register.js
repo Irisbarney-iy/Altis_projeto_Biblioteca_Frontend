@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const cpf = document.getElementById('cpf').value;
+        const phone = document.getElementById('phone').value;
         const birth = document.getElementById('date-birth').value;
         const address = document.getElementById('address').value;
         const password = document.getElementById('password').value;
@@ -18,14 +19,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
 
         let users = JSON.parse(localStorage.getItem('users')) || [];
-        const trueUser = users.find(user => user.email === email || user.cpf === cpf);
+        const trueUser = users.find(user => user.email === email || user.cpf === cpf || user.phone === phone);
 
         if(trueUser){
             alert('Esse usuário já existe')
             return;
         }
 
-        const newUser = {name, email, cpf, birth, address, password};
+        const newUser = {name, email, cpf, phone, birth, address, password};
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
 
@@ -63,6 +64,23 @@ cpfInput.addEventListener('input', () => {
     cpfInput.value = cpf;
 
 });
+
+// máscara do telefone
+const phoneInput = document.getElementById('phone');
+phoneInput.value = '(85) 9 ';
+
+phoneInput.addEventListener('input', () => {
+    let phone = phoneInput.value.replace(/\D/g, '');
+
+    phone = phone.slice(0, 11);
+    let phoneNumber = phone.slice(3);
+
+    if(phoneNumber.length >= 5){
+        phoneNumber = phoneNumber.slice(0, 4) + '-' + phoneNumber.slice(4);
+    }
+
+    phoneInput.value = '(85) 9 ' + phoneNumber;
+})
 
 // parte do botão de ocultar e mostrar as informações
 const inputPassword = document.getElementById('password');
