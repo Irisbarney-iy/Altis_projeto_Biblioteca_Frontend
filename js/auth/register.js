@@ -93,7 +93,7 @@ ocult.addEventListener('click', ()=>{
         ocultIcon.src = '../../assets/icons/visible.svg'
     } else{
         inputPassword.type = 'password'
-        ocultIcon.src = '../../assets/icons/invisible.svg'
+        ocultIcon.src = '../../assets/icons/Invisible.svg'
     }
 });
 
@@ -107,6 +107,6 @@ ocultConfirm.addEventListener('click', ()=>{
         ocultIconConfirm.src = '../../assets/icons/visible.svg'
     } else{
         inputPasswordConfirm.type = 'password'
-        ocultIconConfirm.src = '../../assets/icons/invisible.svg'
+        ocultIconConfirm.src = '../../assets/icons/Invisible.svg'
     }
 });

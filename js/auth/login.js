@@ -31,6 +31,6 @@ ocult.addEventListener('click', ()=>{
         ocultIcon.src = 'assets/icons/visible.svg'
     } else{
         inputPassword.type = 'password'
-        ocultIcon.src = 'assets/icons/invisible.svg'
+        ocultIcon.src = 'assets/icons/Invisible.svg'
     }
 });
