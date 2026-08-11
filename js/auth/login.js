@@ -2,11 +2,32 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.inputs-form');
 
+    const inputEmail = document.getElementById('email');
+    const inputPassword = document.getElementById('password');
+    const rememberEmail = localStorage.getItem('rememberEmail');
+    const rememberPassword = localStorage.getItem('rememberPassword');
+    const remember = document.getElementById('remember');
+
+    // verificador se existe localStorage
+    if(rememberEmail && rememberPassword){
+        inputEmail.value = localStorage.getItem('rememberEmail');
+        inputPassword.value = localStorage.getItem('rememberPassword');
+        remember.checked = true;
+    }
+
     form.addEventListener('submit', (event)=>{
         event.preventDefault();
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
+
+        if(remember.checked){
+            localStorage.setItem('rememberEmail', inputEmail.value);
+            localStorage.setItem('rememberPassword', inputPassword.value);
+        }else{
+            localStorage.removeItem('rememberEmail');
+            localStorage.removeItem('rememberPassword');
+        }
 
         const users = JSON.parse(localStorage.getItem('users')) || [];
         const loggedUser = users.find(user => user.email === email && user.password === password);
