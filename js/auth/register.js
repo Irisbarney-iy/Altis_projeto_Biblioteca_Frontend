@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             alert('As senhas não são iguais')
             return;
         }
-
+ 
         let users = JSON.parse(localStorage.getItem('users')) || [];
         const trueUser = users.find(user => user.email === email || user.cpf === cpf || user.phone === phone);
 

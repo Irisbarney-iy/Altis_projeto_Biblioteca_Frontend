@@ -28,13 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('rememberEmail');
             localStorage.removeItem('rememberPassword');
         }
-
+        const adminEmail = 'admin@admin.com';
+        const adminPassword = '12345678';
         const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        if(adminEmail === email && adminPassword === password){
+            const loggedAdmin = {email: adminEmail};
+            localStorage.setItem('loggedUser', JSON.stringify(loggedAdmin));
+            window.location.href = 'pages/admin/dashboard.html'
+            return;
+        }
+
         const loggedUser = users.find(user => user.email === email && user.password === password);
 
         if(loggedUser){
             localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
-            window.location.href = 'pages/admin/dashboard.html'
+            window.location.href = 'pages/user/dashboard.html'
         }else{
             alert('Email ou senha incorretos!')
         }
