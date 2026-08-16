@@ -13,6 +13,11 @@
     grid-template-areas: 
         "header header"
         "menu main";
+    transition: 0.5s ease;
+}
+
+.content.menu-hidden{
+    grid-template-columns: 0fr 1fr;
 }
 
 .header{
@@ -33,6 +38,12 @@
     font-size: 20px;
     text-align: center;
     grid-area: menu;
+    overflow: hidden;
+    transition: ease 0.5s;
+}
+
+.menu.active{
+    visibility: hidden;
 }
 
 .menu img{
@@ -40,6 +51,7 @@
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 12px;
+    cursor: pointer;
 }
 
 .menu a{
@@ -101,9 +113,31 @@
 }
 
 .main{
-    padding: 2rem;
+    padding: 0.8rem;
     background-color: #FFF3D8;
     grid-area: main;
+}
+
+.main-button{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    color: #B15505;
+    font-size: 28px;
+}
+
+.return-icon{
+    width: 35px;;
+    visibility: hidden;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: ease 0.5s;
+}
+
+.return-icon.visible{
+    visibility: visible;
+    opacity: 1;
 }
 
 .logo-text{
@@ -131,6 +165,7 @@
     opacity: 0;
     height: 100px;
     z-index: 100;
+    transition: ease 0.2s;
 }
 
 .menu-modal.active{
