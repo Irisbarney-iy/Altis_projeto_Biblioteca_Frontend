@@ -7,19 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return; 
     }
 
-    const btnLogout = document.querySelector('.logout');
+    const btnLogout = document.querySelector('.btn-logout');
     btnLogout.addEventListener('click', () => {
         localStorage.removeItem('loggedUser');
         window.location.href = '../../index.html';
-    });
-
-    let modal = document.getElementByIde('menu-modal-functionl');
-    const configurations = document.querySelector('.configurations');
-    configurations.addEventListener('click', () => {
-        if(modal.style.visibility === 'hidden'){
-            modal.style.visibility = 'visible';
-        }else{
-            modal.style.visibility = 'hidden';
-        }
     });
 });
