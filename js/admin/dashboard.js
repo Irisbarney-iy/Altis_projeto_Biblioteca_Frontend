@@ -13,13 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '../../index.html';
     });
 
-    let modal = document.getElementByIde('menu-modal-functionl');
+    // parte pra abrir o menu, o de opções
+    const modal = document.getElementById('menu-modal-function');
     const configurations = document.querySelector('.configurations');
     configurations.addEventListener('click', () => {
-        if(modal.style.visibility === 'hidden'){
-            modal.style.visibility = 'visible';
-        }else{
-            modal.style.visibility = 'hidden';
-        }
+        modal.classList.toggle('active');
     });
 });

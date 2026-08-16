@@ -97,6 +97,7 @@
 
 .configurations{
     color: #fff3d8ac;
+    cursor: pointer;
 }
 
 .main{
@@ -127,9 +128,14 @@
     visibility: hidden;
     cursor: pointer;
     width: 240px;
+    opacity: 0;
     height: 100px;
     z-index: 100;
-    transition: ease 0.8s;
+}
+
+.menu-modal.active{
+    visibility: visible;
+    opacity: 1;
 }
 
 .preferences{

@@ -19,6 +19,7 @@
     background-color: #B15505;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-direction: row;
     grid-area: header;
     padding: 10px;
@@ -51,7 +52,7 @@
     height: 12%;
 }
 
-.dashboard, .users, .publishers, .books{
+.publishers, .users, .dashboard, .books{
     background-color: #B15505;
     color: #FFF3D8;
 }
@@ -75,21 +76,28 @@
     align-items: center;
 }
 
-.btn-logout{
-    background-color: #B15505;
-    color: #FFF3D8;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.exit-container{
+.user-container{
     display: flex;
     flex-direction: row;
+    color:#FFF3D8;
     align-items: center;
     justify-self: end;
+}
+
+.user-container img{
+    width: 70px;
+    height: auto;
+}
+
+.user-organizer{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.configurations{
+    color: #fff3d8ac;
+    cursor: pointer;
 }
 
 .main{
@@ -105,4 +113,55 @@
 .logo-icon{
     width: 15%;
     height: auto;
+}
+
+.menu-modal{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #B15505;
+    left: 82%;
+    top: 12%;
+    color: #FFF3D8;
+    visibility: hidden;
+    cursor: pointer;
+    width: 240px;
+    opacity: 0;
+    height: 100px;
+    z-index: 100;
+}
+
+.menu-modal.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.preferences{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 100%;
+    transition: ease 0.5s;
+}
+
+.preferences:hover{
+    background-color:#954907
+}
+
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    height: 100%;
+    transition: ease 0.5s;
+}
+
+.logout:hover{
+    background-color:#954907
 }

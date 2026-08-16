@@ -7,9 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return; 
     }
 
-    const btnLogout = document.querySelector('.btn-logout');
+    const btnLogout = document.querySelector('.logout');
     btnLogout.addEventListener('click', () => {
         localStorage.removeItem('loggedUser');
         window.location.href = '../../index.html';
+    });
+
+    // parte pra abrir o menu, o de opções
+    const modal = document.getElementById('menu-modal-function');
+    const configurations = document.querySelector('.configurations');
+    configurations.addEventListener('click', () => {
+        modal.classList.toggle('active');
     });
 });
