@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
 
     if (!loggedUser) {
-        alert('Você precisa fazer login para acessar o Dashboard');
+        alert('Você precisa fazer login para acessar o sistema');
         window.location.href = '../../index.html';
         return; 
     }

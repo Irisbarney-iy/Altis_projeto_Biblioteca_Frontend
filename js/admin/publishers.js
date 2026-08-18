@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
 
     if (!loggedUser) {
-        alert('Você precisa fazer login para acessar o Dashboard');
+        alert('Você precisa fazer login para acessar o sistema');
         window.location.href = '../../index.html';
         return; 
     }
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         content.classList.add('menu-hidden');
     })
 
-    const menuVisibleClick = document.querySelector('.main-button');
+    const menuVisibleClick = document.querySelector('.main-title');
     menuVisibleClick.addEventListener('click', () => {
         returnIcon.classList.remove('visible');
         menuOcult.classList.remove('active');

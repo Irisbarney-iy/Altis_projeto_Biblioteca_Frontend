@@ -118,16 +118,203 @@
     grid-area: main;
 }
 
-.main-button{
+.main-title{
     display: flex;
     align-items: center;
     width: 250px;
+    margin-left: 20px;
     color: #B15505;
     font-size: 28px;
 }
 
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 10px;
+}
+
+.main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-input{
+    padding: 10px;
+    width: 120%;
+    height: 32px;
+    border: 2px solid #B15505;
+    background-image: url('../../assets/icons/Search.svg');
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-size: 22px;
+    padding-left: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #B15505;
+    background-color: #FFFBEC;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-input::placeholder{
+    color: #b1550575;
+    font-size: 14px;
+}
+
+.filter-side{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.filter-button, .add-button{
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-button{
+    width: 100%;
+    background-color: #FFF3D8;
+    background-image: url('../../assets/icons/Funnel.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 2px center;
+    padding-left: 25px;
+    color: #B15505;
+    border: 2px solid #B15505;
+}
+
+.users-table-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #B15505;
+    border-radius: 10px;
+    color: #B15505;
+}
+
+.users-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table tr{
+
+    border-bottom: 2px solid #B15505;
+}
+
+.users-table td, th{
+    text-align: left;
+    padding: 10px;
+}
+
+.users-status{
+    background-color: transparent;
+}
+
+.users-status.del-late{
+    background-color: #ffe6009a;
+    color: #c3b00a;
+    padding: 4px;
+    border-radius: 10px;
+    font-weight: 550;
+}
+
+.users-status.del-in-time{
+    background-color: #85ff6f93;
+    color: #169600;
+    padding: 4px;
+    border-radius: 10px;
+    font-weight: 550;
+}
+
+.users-status.in-term{
+    background-color: #85ff6f93;
+    color: #169600;
+    padding: 4px;
+    border-radius: 10px;
+    font-weight: 550;
+}
+
+.users-status.late{
+    background-color: #ff4e4e8d;
+    color: #ac020b;
+    padding: 4px;
+    border-radius: 10px;
+    font-weight: 550;
+}
+
+.button-renove{
+    padding: 7px;
+    background-color: #FFF3D8;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    color: #B15505;
+    font-weight: 400;
+}
+
+.button-devolut-return{
+    background-image: url('../../assets/icons/BorrowBook.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 2px center;
+    width: 30px;
+    height: 30px;
+    padding: 9.4px;
+    background-color: #FFF3D8;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    color: #B15505;
+}
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 12px;
+}
+
+.pagination-buttons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.pagination-button{
+    width: 30px;
+    height: 30px;
+    background-color: #FFF3D8;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    color: #B15505;
+    font-weight: bold;
+}
+
+#back-pagination{
+    background-image: url('../../assets/icons/BackPagination.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 2px center;
+}
+
+#front-pagination{
+    background-image: url('../../assets/icons/front-pagination.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 2px center;
+}
+
 .return-icon{
-    width: 35px;;
+    width: 35px;
     visibility: hidden;
     overflow: hidden;
     cursor: pointer;
