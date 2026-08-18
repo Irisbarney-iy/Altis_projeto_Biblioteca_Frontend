@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         content.classList.add('menu-hidden');
     })
 
-    const menuVisibleClick = document.querySelector('.main-button');
+    const menuVisibleClick = document.querySelector('.main-title');
     menuVisibleClick.addEventListener('click', () => {
         returnIcon.classList.remove('visible');
         menuOcult.classList.remove('active');

@@ -118,12 +118,107 @@
     grid-area: main;
 }
 
-.main-button{
+.main-title{
     display: flex;
     align-items: center;
     width: 250px;
     color: #B15505;
     font-size: 28px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 10px;
+}
+
+.main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-input{
+    padding: 10px;
+    width: 120%;
+    height: 32px;
+    border: 2px solid #B15505;
+    background-image: url('../../assets/icons/Search.svg');
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-size: 22px;
+    padding-left: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #B15505;
+    background-color: #FFFBEC;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-input::placeholder{
+    color: #b1550575;
+    font-size: 14px;
+}
+
+.filter-side{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.filter-button, .add-button{
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-button{
+    width: 100%;
+    background-color: #FFF3D8;
+    background-image: url('../../assets/icons/Funnel.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 2px center;
+    padding-left: 25px;
+    color: #B15505;
+    border: 2px solid #B15505;
+}
+
+.add-button{
+    width: 100%;
+    background-color: #B15505;
+    background-image: url('../../assets/icons/PlusMath.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 2px center;
+    padding-left: 25px;
+    color: #FFF3D8;
+    border: 2px solid #B15505;
+}
+
+.rentals-table-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #B15505;
+    border-radius: 10px;
+    color: #B15505;
+    padding: 10px;
+}
+
+.rentals-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rentals-table tr{
+    border-bottom: 2px solid #B15505;
+    
 }
 
 .return-icon{
