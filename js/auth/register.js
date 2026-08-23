@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             return;
         }
 
-        const newUser = {name, email, cpf, phone, birth, address, password};
+        const newUser = {id: crypto.randomUUID(), name, email, cpf, phone, birth, address, password, active: true};
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
 
