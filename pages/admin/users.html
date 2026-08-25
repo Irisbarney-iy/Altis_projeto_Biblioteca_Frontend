@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../../assets/favicons/android-chrome-512x512.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="../../css/admin/dashboard.css">
+    <link rel="stylesheet" href="../../css/admin/users.css">
     <title>BibliotecaBooks</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
         </header>
         <aside class="menu" id="menu-function">
             <span class="menu-button">
-                <img class="back-icon" src="../../assets/icons/Back.svg"/>
+                <img class="back-icon" src="../../assets\icons\Back.svg"/>
             </span>
             <a href="dashboard.html" class="dashboard">
                 <p>DASHBOARD</p>
@@ -49,58 +49,47 @@
                 <p>LIVROS</p>
             </a>
         </aside>
-
         <main class="main">
             <span class="main-title">
-                <p>DASHBOARD</p>
+                <p>USUÁRIOS</p>
                 <img class="return-icon" id="return-icon-function" alt="voltar" src="../../assets/icons/Return.svg">
             </span>
             <div class="main-content">
-                <div class="dashboard-cards">
-                    <div class="dashboard-card">
-                        <div class="card-info">
-                            <p class="card-title">Total de Livros</p>
-                            <h2 id="total-books">0</h2>
-                        </div>
-                        <img src="../../assets/icons/bookClosed.svg" alt="Ícone de livros">
+                <div class="main-header">
+                    <div class="search-side">
+                        <input class="search-input" id="search-input-function" type="search" placeholder="Buscar usuários...">
                     </div>
-                    <div class="dashboard-card">
-                        <div class="card-info">
-                            <p class="card-title">Empréstimos Ativos</p>
-                            <h2 id="active-rentals">0</h2>
+                    <div class="filter-side">
+                        <div class="filter">
+                            <button class="filter-button" id="filter-button-function">Filtrar</button>
                         </div>
-                        <img src="../../assets/icons/Page.svg" alt="Ícone de empréstimos">
                     </div>
-                    <div class="dashboard-card">
-                        <div class="card-info">
-                            <p class="card-title">Empréstimos ao Mês</p>
-                            <h2 id="monthly-rentals">0</h2>
-                        </div>
-                        <img src="../../assets/icons/PayDate.svg" alt="Ícone de calendário">
-                    </div>
-                    <div class="dashboard-card">
-                        <div class="card-info">
-                            <p class="card-title">Alertas Críticos de Atraso</p>
-                            <h2 id="critical-alerts">0</h2>
-                        </div>
-                        <img src="../../assets/icons/Error.svg" alt="Ícone de alerta">
-                    </div>
-                </div>
-                <div class="dashboard-table-container">
-                    <table class="dashboard-table" id="dashboard-table-function">
+                </div> 
+                <div class="users-table-container">
+                    <table class="users-table" id="users-table-function">
                         <thead>
                             <tr>
-                                <th>Locátario</th>
-                                <th>Livro</th>
-                                <th>Data Aluguel</th>
-                                <th>Prazo</th>
-                                <th>Entrega</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                                <th>CPF</th>
                                 <th>Status</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
-                        <tbody id="dashboard-table"></tbody>
+                        <tbody id="users-table"></tbody>
                     </table>
+                    <div class="pagination">
+                        <p id="pagination-info"></p>
+                        <div class="pagination-buttons-container">
+                            <button class="pagination-button" id="back-pagination">
+                                
+                            </button>
+                            <button class="pagination-button" id="front-pagination">
+                                
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -113,6 +102,11 @@
             <span class="btn-logout">Sair</span>
         </div>
     </div>
-    <script src="../../js/admin/dashboard.js"></script>
+    <div class="filter-menu" id="filter-menu-function">
+        <button class="filter-option" data-filter = "az">A - Z</button>
+        <hr class="separete-line">
+        <button class="filter-option" data-filter = "za">Z - A</button>
+    </div>
+    <script src="../../js/admin/users.js"></script>
 </body>
 </html>

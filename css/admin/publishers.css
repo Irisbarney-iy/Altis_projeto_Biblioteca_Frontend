@@ -64,12 +64,12 @@
     height: 12%;
 }
 
-.rentals, .users, .publishers, .books{
+.rentals, .users, .dashboard, .books{
     background-color: #B15505;
     color: #FFF3D8;
 }
 
-.dashboard{
+.publishers{
     background-color: #FFF3D8;
     color: #B15505;
 }
@@ -135,43 +135,11 @@
     gap: 10px;
 }
 
-.dashboard-cards{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 100%;
-}
-
-.dashboard-card{
+.main-header{
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    min-height: 120px;
-    padding: 20px;
-    background-color: #FFF3D8;
-    border: 3px solid #B15505;
-    border-radius: 10px;
-    color: #B15505;
-}
-
-.card-info{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.card-title{
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.card-info h2{
-    font-size: 32px;
-}
-
-.dashboard-card img{
-    width: 45px;
-    height: 45px;
+    align-items: center;
 }
 
 .search-input{
@@ -234,7 +202,7 @@
     border: 2px solid #B15505;
 }
 
-.dashboard-table-container{
+.publishers-table-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,70 +211,35 @@
     color: #B15505;
 }
 
-.dashboard-table{
+.publishers-table{
     width: 100%;
     border-collapse: collapse;
 }
 
-.dashboard-table tr{
+.publishers-table tr{
     border-bottom: 2px solid #B15505;
 }
 
-.dashboard-table td, th{
+.publishers-table td, th{
     text-align: left;
     padding: 10px;
 }
 
-.dashboard-status{
-    background-color: transparent;
-}
-
-.dashboard-status.del-late{
-    background-color: #ffe6009a;
-    color: #c3b00a;
-    padding: 4px;
-    border-radius: 10px;
-    font-weight: 550;
-}
-
-.dashboard-status.del-in-time{
-    background-color: #85ff6f93;
-    color: #169600;
-    padding: 4px;
-    border-radius: 10px;
-    font-weight: 550;
-}
-
-.dashboard-status.in-term{
-    background-color: #85ff6f93;
-    color: #169600;
-    padding: 4px;
-    border-radius: 10px;
-    font-weight: 550;
-}
-
-.dashboard-status.late{
-    background-color: #ff4e4e8d;
-    color: #ac020b;
-    padding: 4px;
-    border-radius: 10px;
-    font-weight: 550;
-}
-
-.button-renove{
+.button-edit{
     padding: 7px;
     background-color: #FFF3D8;
     border: 2px solid #B15505;
     border-radius: 5px;
     color: #B15505;
     font-weight: 400;
+    cursor: pointer;
 }
 
-.button-devolut-return{
-    background-image: url('../../assets/icons/BorrowBook.svg');
+.button-delete{
+    background-image: url('../../assets/icons/Trash.svg');
     background-repeat: no-repeat;
     background-size: 22px;
-    background-position: 2px center;
+    background-position: center;
     width: 30px;
     height: 30px;
     padding: 9.4px;
@@ -314,6 +247,7 @@
     border: 2px solid #B15505;
     border-radius: 5px;
     color: #B15505;
+    cursor: pointer;
 }
 
 .pagination{
@@ -340,6 +274,7 @@
     border-radius: 5px;
     color: #B15505;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #back-pagination{
@@ -414,7 +349,7 @@
 }
 
 .preferences:hover{
-    background-color:#954907
+    background-color: #954907;
 }
 
 .logout{
@@ -428,15 +363,157 @@
 }
 
 .logout:hover{
-    background-color:#954907
+    background-color: #954907;
 }
 
-.dashboard-table-container{
+.filter-menu{
     display: flex;
+    position: fixed;
     flex-direction: column;
+    left: 80.5%;
+    top: 25%;
+    color: #FFF3D8;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    width: 150px;
+    z-index: 100;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    background-color: #FFF3D8;
+    transition: ease 0.3s;
+}
+
+.filter-menu.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.filter-menu button{
+    background-color: transparent;
+    color: #B15505;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    transition: ease 0.3s;
+}
+
+.filter-menu button:hover{
+    background-color: #ede2c7;
+}
+
+.separete-line{
+  height: 2px;
+  background-color: #B15505;
+  border: none;
+}
+
+.publisher-modal{
+    position: fixed;
+    inset: 0;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: #00000080;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 200;
+}
+
+.publisher-modal.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.publisher-modal-content{
+    position: relative;
+    width: 500px;
+    padding: 30px;
     border: 3px solid #B15505;
     border-radius: 10px;
+    background-color: #FFF3D8;
     color: #B15505;
-    margin-top: 10px;
+}
+
+.publisher-modal-content h2{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modal-input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.modal-input label{
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.modal-input input{
+    width: 100%;
+    height: 38px;
+    padding: 8px;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    outline: none;
+    background-color: #FFFBEC;
+    color: #B15505;
+}
+
+.modal-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.modal-buttons button{
+    padding: 10px 25px;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cancel-publisher{
+    background-color: #FFF3D8;
+    color: #B15505;
+}
+
+.modal-buttons button[type="submit"]{
+    background-color: #B15505;
+    color: #FFF3D8;
+}
+
+.button-edit{
+    background-image: url('../../assets/icons/EditPencil.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF3D8;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-delete{
+    background-image: url('../../assets/icons/Remove.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF3D8;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons-actions{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }

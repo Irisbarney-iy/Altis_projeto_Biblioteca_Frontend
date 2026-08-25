@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter, sans-serif;
+}
+
+.content{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+    grid-template-areas:
+        "header"
+        "main";
+}
+
+.header{
+    background-color: #B15505;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    grid-area: header;
+    padding: 10px;
+}
+
+.logotype-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text{
+    color: #FFF3D8;
+}
+
+.logo-icon{
+    width: 70px;
+    height: auto;
+}
+
+.back-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.back-button img{
+    width: 45px;
+    height: 45px;
+}
+
+.main{
+    padding: 0.8rem;
+    background-color: #FFF3D8;
+    grid-area: main;
+}
+
+.main-title{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    margin-left: 20px;
+    color: #B15505;
+    font-size: 28px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.preferences-container{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #B15505;
+    border-radius: 10px;
+    color: #B15505;
+    padding: 25px;
+    gap: 30px;
+}
+
+.preferences-header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.preferences-header h2{
+    font-size: 24px;
+}
+
+.preferences-header p{
+    font-size: 16px;
+}
+
+.preference-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 2px solid #B15505;
+}
+
+.preference-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.preference-title{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.preference-description{
+    font-size: 14px;
+    color: #b1550575;
+}
+
+#language-select{
+    width: 220px;
+    padding: 10px;
+    border: 2px solid #B15505;
+    border-radius: 5px;
+    background-color: #FFF3D8;
+    color: #B15505;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}

@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             return;
         }
 
-        const newUser = {name, email, cpf, phone, birth, address, password};
+        const newUser = {id: crypto.randomUUID(), name, email, cpf, phone, birth, address, password, active: true};
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
 
@@ -90,10 +90,10 @@ const ocultIcon = document.getElementById('ocult-icon-image');
 ocult.addEventListener('click', ()=>{
     if(inputPassword.type === 'password'){
         inputPassword.type = 'text'
-        ocultIcon.src = '../../assets/icons/visible.svg'
+        ocultIcon.src = '../../assets/icons/Invisible.svg'
     } else{
         inputPassword.type = 'password'
-        ocultIcon.src = '../../assets/icons/Invisible.svg'
+        ocultIcon.src = '../../assets/icons/visible.svg'
     }
 });
 
@@ -104,9 +104,9 @@ const ocultIconConfirm = document.getElementById('ocult-icon-image-confirm');
 ocultConfirm.addEventListener('click', ()=>{
     if(inputPasswordConfirm.type === 'password'){
         inputPasswordConfirm.type = 'text'
-        ocultIconConfirm.src = '../../assets/icons/visible.svg'
+        ocultIconConfirm.src = '../../assets/icons/Invisible.svg'
     } else{
         inputPasswordConfirm.type = 'password'
-        ocultIconConfirm.src = '../../assets/icons/Invisible.svg'
+        ocultIconConfirm.src = '../../assets/icons/visible.svg'
     }
 });

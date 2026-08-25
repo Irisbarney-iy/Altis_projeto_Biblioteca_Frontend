@@ -58,9 +58,9 @@ const ocultIcon = document.getElementById('ocult-icon-image');
 ocult.addEventListener('click', ()=>{
     if(inputPassword.type === 'password'){
         inputPassword.type = 'text'
-        ocultIcon.src = 'assets/icons/visible.svg'
+        ocultIcon.src = 'assets/icons/Invisible.svg'
     } else{
         inputPassword.type = 'password'
-        ocultIcon.src = 'assets/icons/Invisible.svg'
+        ocultIcon.src = 'assets/icons/visible.svg'
     }
 });

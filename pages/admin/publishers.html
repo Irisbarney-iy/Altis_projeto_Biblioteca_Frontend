@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../../assets/favicons/android-chrome-512x512.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="../../css/admin/dashboard.css">
+    <link rel="stylesheet" href="../../css/admin/publishers.css">
     <title>BibliotecaBooks</title>
 </head>
 <body>
@@ -49,58 +49,45 @@
                 <p>LIVROS</p>
             </a>
         </aside>
-
         <main class="main">
             <span class="main-title">
-                <p>DASHBOARD</p>
+                <p>EDITORAS</p>
                 <img class="return-icon" id="return-icon-function" alt="voltar" src="../../assets/icons/Return.svg">
             </span>
             <div class="main-content">
-                <div class="dashboard-cards">
-                    <div class="dashboard-card">
-                        <div class="card-info">
-                            <p class="card-title">Total de Livros</p>
-                            <h2 id="total-books">0</h2>
-                        </div>
-                        <img src="../../assets/icons/bookClosed.svg" alt="Ícone de livros">
+                <div class="main-header">
+                    <div class="search-side">
+                        <input class="search-input" id="search-input-function" type="search" placeholder="Buscar editoras...">
                     </div>
-                    <div class="dashboard-card">
-                        <div class="card-info">
-                            <p class="card-title">Empréstimos Ativos</p>
-                            <h2 id="active-rentals">0</h2>
+                    <div class="filter-side">
+                        <div class="filter">
+                            <button class="filter-button" id="filter-button-function">Filtrar</button>
                         </div>
-                        <img src="../../assets/icons/Page.svg" alt="Ícone de empréstimos">
-                    </div>
-                    <div class="dashboard-card">
-                        <div class="card-info">
-                            <p class="card-title">Empréstimos ao Mês</p>
-                            <h2 id="monthly-rentals">0</h2>
+                        <div class="add">
+                            <button class="add-button" id="add-button-function">Nova Editora</button>
                         </div>
-                        <img src="../../assets/icons/PayDate.svg" alt="Ícone de calendário">
                     </div>
-                    <div class="dashboard-card">
-                        <div class="card-info">
-                            <p class="card-title">Alertas Críticos de Atraso</p>
-                            <h2 id="critical-alerts">0</h2>
-                        </div>
-                        <img src="../../assets/icons/Error.svg" alt="Ícone de alerta">
-                    </div>
-                </div>
-                <div class="dashboard-table-container">
-                    <table class="dashboard-table" id="dashboard-table-function">
+                </div> 
+                <div class="publishers-table-container">
+                    <table class="publishers-table" id="publishers-table-function">
                         <thead>
                             <tr>
-                                <th>Locátario</th>
-                                <th>Livro</th>
-                                <th>Data Aluguel</th>
-                                <th>Prazo</th>
-                                <th>Entrega</th>
-                                <th>Status</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                                <th>Site</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
-                        <tbody id="dashboard-table"></tbody>
+                        <tbody id="publishers-table"></tbody>
                     </table>
+                    <div class="pagination">
+                        <p id="pagination-info"></p>
+                        <div class="pagination-buttons-container">
+                            <button class="pagination-button" id="back-pagination"></button>
+                            <button class="pagination-button" id="front-pagination"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -113,6 +100,38 @@
             <span class="btn-logout">Sair</span>
         </div>
     </div>
-    <script src="../../js/admin/dashboard.js"></script>
+    <div class="filter-menu" id="filter-menu-function">
+        <button class="filter-option" data-filter="az">A - Z</button>
+        <hr class="separete-line">
+        <button class="filter-option" data-filter="za">Z - A</button>
+    </div>
+    <div class="publisher-modal" id="publisher-modal-function">
+        <div class="publisher-modal-content">
+            <h2>Nova Editora</h2>
+            <form id="publisher-form">
+                <div class="modal-input">
+                    <label for="publisher-name">Nome</label>
+                    <input type="text" id="publisher-name" required>
+                </div>
+                <div class="modal-input">
+                    <label for="publisher-email">Email</label>
+                    <input type="email" id="publisher-email" required>
+                </div>
+                <div class="modal-input">
+                    <label for="publisher-phone">Telefone</label>
+                    <input type="text" id="publisher-phone" required>
+                </div>
+                <div class="modal-input">
+                    <label for="publisher-website">Site</label>
+                    <input type="text" id="publisher-website" placeholder="www.exemplo.com">
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" id="cancel-publisher">Cancelar</button>
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../../js/admin/publishers.js"></script>
 </body>
 </html>

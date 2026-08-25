@@ -64,12 +64,12 @@
     height: 12%;
 }
 
-.rentals, .users, .publishers, .books{
+.rentals, .publishers, .dashboard, .books{
     background-color: #B15505;
     color: #FFF3D8;
 }
 
-.dashboard{
+.users{
     background-color: #FFF3D8;
     color: #B15505;
 }
@@ -135,43 +135,11 @@
     gap: 10px;
 }
 
-.dashboard-cards{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 100%;
-}
-
-.dashboard-card{
+.main-header{
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    min-height: 120px;
-    padding: 20px;
-    background-color: #FFF3D8;
-    border: 3px solid #B15505;
-    border-radius: 10px;
-    color: #B15505;
-}
-
-.card-info{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.card-title{
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.card-info h2{
-    font-size: 32px;
-}
-
-.dashboard-card img{
-    width: 45px;
-    height: 45px;
+    align-items: center;
 }
 
 .search-input{
@@ -211,7 +179,7 @@
 }
 
 .filter-button{
-    width: 100%;
+    width: 100px;
     background-color: #FFF3D8;
     background-image: url('../../assets/icons/Funnel.svg');
     background-repeat: no-repeat;
@@ -222,19 +190,49 @@
     border: 2px solid #B15505;
 }
 
-.add-button{
-    width: 100%;
-    background-color: #B15505;
-    background-image: url('../../assets/icons/PlusMath.svg');
-    background-repeat: no-repeat;
-    background-size: 22px;
-    background-position: 2px center;
-    padding-left: 28px;
+.filter-menu{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    left: 88%;
+    top: 25%;
     color: #FFF3D8;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    width: 150px;
+    z-index: 100;
     border: 2px solid #B15505;
+    border-radius: 5px;
+    background-color: #FFF3D8;
+    transition: ease 0.3s;
 }
 
-.dashboard-table-container{
+.filter-menu.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.filter-menu button{
+    background-color: transparent;
+    color: #B15505;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    transition: ease 0.3s;
+}
+
+.filter-menu button:hover{
+    background-color: #ede2c7;
+}
+
+.separete-line{
+  height: 2px;
+  background-color: #B15505;
+  border: none;
+}
+
+.users-table-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,33 +241,24 @@
     color: #B15505;
 }
 
-.dashboard-table{
+.users-table{
     width: 100%;
     border-collapse: collapse;
 }
 
-.dashboard-table tr{
+.users-table tr{
+
     border-bottom: 2px solid #B15505;
 }
 
-.dashboard-table td, th{
+.users-table td, th{
     text-align: left;
     padding: 10px;
 }
 
-.dashboard-status{
-    background-color: transparent;
-}
-
-.dashboard-status.del-late{
-    background-color: #ffe6009a;
-    color: #c3b00a;
-    padding: 4px;
-    border-radius: 10px;
-    font-weight: 550;
-}
-
-.dashboard-status.del-in-time{
+.user-active{
+    text-align: center;
+    width: 70px;
     background-color: #85ff6f93;
     color: #169600;
     padding: 4px;
@@ -277,15 +266,7 @@
     font-weight: 550;
 }
 
-.dashboard-status.in-term{
-    background-color: #85ff6f93;
-    color: #169600;
-    padding: 4px;
-    border-radius: 10px;
-    font-weight: 550;
-}
-
-.dashboard-status.late{
+.user-active.false{
     background-color: #ff4e4e8d;
     color: #ac020b;
     padding: 4px;
@@ -293,27 +274,47 @@
     font-weight: 550;
 }
 
-.button-renove{
-    padding: 7px;
-    background-color: #FFF3D8;
-    border: 2px solid #B15505;
-    border-radius: 5px;
-    color: #B15505;
-    font-weight: 400;
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
 }
 
-.button-devolut-return{
-    background-image: url('../../assets/icons/BorrowBook.svg');
-    background-repeat: no-repeat;
-    background-size: 22px;
-    background-position: 2px center;
-    width: 30px;
-    height: 30px;
-    padding: 9.4px;
-    background-color: #FFF3D8;
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.circle{
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #D9D0BB;
     border: 2px solid #B15505;
-    border-radius: 5px;
-    color: #B15505;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.circle::before{
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 4px;
+    left: 3px;
+    background-color: #B15505;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .circle{
+    background-color: #FFF3D8;
+}
+
+.switch input:checked + .circle::before{
+    transform: translateX(30px);
 }
 
 .pagination{
@@ -429,14 +430,4 @@
 
 .logout:hover{
     background-color:#954907
-}
-
-.dashboard-table-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 3px solid #B15505;
-    border-radius: 10px;
-    color: #B15505;
-    margin-top: 10px;
 }
