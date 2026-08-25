@@ -23,7 +23,7 @@
             </div>
             <div class="user-container">
                 <div class="user-organizer">
-                    <p class="user-name">Irisbarney Damasceno Martins Filho</p>
+                    <p class="user-name">Administrador</p>
                     <a class="configurations">configurações</a>
                 </div>
                 <img alt="icone de perfil" src="../../assets/icons/Profile.svg">
@@ -81,28 +81,13 @@
                                 <th>Ações</th>
                             </tr>
                         </thead>
-                        <tbody id="rentals-table">
-
-                        </tbody>
+                        <tbody id="rentals-table"></tbody>
                     </table>
                     <div class="pagination">
-                        <p>Mostrando de 1 a 8 de 30 empréstimos</p>
+                        <p id="pagination-info"></p>
                         <div class="pagination-buttons-container">
-                            <button class="pagination-button" id="back-pagination">
-                                
-                            </button>
-                            <button class="pagination-button" id="1-pagination">
-                                1
-                            </button>
-                            <button class="pagination-button" id="2-pagination">
-                                2
-                            </button>
-                            <button class="pagination-button" id="2-pagination">
-                                3
-                            </button>
-                            <button class="pagination-button" id="front-pagination">
-                                
-                            </button>
+                            <button class="pagination-button" id="back-pagination"></button>
+                            <button class="pagination-button" id="front-pagination"></button>
                         </div>
                     </div>
                 </div>
@@ -117,6 +102,87 @@
             <span class="btn-logout">Sair</span>
         </div>
     </div>
+    <div class="filter-menu" id="filter-menu-function">
+        <button class="filter-option" data-filter="az">A - Z</button>
+        <hr class="separete-line">
+        <button class="filter-option" data-filter="za">Z - A</button>
+    </div>
+    <div class="rental-modal" id="rental-modal-function">
+
+    <section class="rental-register">
+        <div class="rental-modal-header">
+            <h1>Novo Empréstimo</h1>
+
+            <button
+                class="close-rental-modal"
+                id="close-rental-modal"
+                type="button">
+            </button>
+        </div>
+        <form class="rental-form" id="rental-form">
+            <div class="inputs">
+                <label class="text-inputs" for="rental-renter">
+                    Locatário
+                </label>
+
+                <select
+                    class="entry-input"
+                    id="rental-renter"
+                    required>
+
+                    <option value="" selected disabled>
+                        Selecione um usuário
+                    </option>
+
+                </select>
+            </div>
+            <div class="inputs">
+                <label class="text-inputs" for="rental-book">
+                    Livro
+                </label>
+
+                <select class="entry-input" id="rental-book" required>
+                    <option value="" selected disabled>
+                        Selecione um livro
+                    </option>
+                </select>
+            </div>
+            <div class="inputs">
+                <label class="text-inputs" for="rental-date">
+                    Data do aluguel
+                </label>
+                <input
+                    class="entry-input"
+                    id="rental-date"
+                    type="date"
+                    required>
+            </div>
+            <div class="inputs">
+                <label class="text-inputs" for="rental-due-date">
+                    Prazo de devolução
+                </label>
+                <input
+                    class="entry-input"
+                    id="rental-due-date"
+                    type="date"
+                    required>
+            </div>
+            <div class="rental-btns">
+                <button
+                    class="btn-cancel-rental"
+                    id="cancel-rental"
+                    type="button">
+                    Cancelar
+                </button>
+                <button
+                    class="btn-register-rental"
+                    type="submit">
+                    Salvar
+                </button>
+            </div>
+        </form>
+    </section>
+</div>
     <script src="../../js/admin/rentals.js"></script>
 </body>
 </html>

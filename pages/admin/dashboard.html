@@ -23,7 +23,7 @@
             </div>
             <div class="user-container">
                 <div class="user-organizer">
-                    <p class="user-name">Irisbarney Damasceno Martins Filho</p>
+                    <p class="user-name">Administrador</p>
                     <a class="configurations">configurações</a>
                 </div>
                 <img alt="icone de perfil" src="../../assets/icons/Profile.svg">
@@ -31,7 +31,7 @@
         </header>
         <aside class="menu" id="menu-function">
             <span class="menu-button">
-                <img class="back-icon" src="../../assets\icons\Back.svg"/>
+                <img class="back-icon" src="../../assets/icons/Back.svg"/>
             </span>
             <a href="dashboard.html" class="dashboard">
                 <p>DASHBOARD</p>
@@ -49,12 +49,43 @@
                 <p>LIVROS</p>
             </a>
         </aside>
+
         <main class="main">
             <span class="main-title">
                 <p>DASHBOARD</p>
                 <img class="return-icon" id="return-icon-function" alt="voltar" src="../../assets/icons/Return.svg">
             </span>
             <div class="main-content">
+                <div class="dashboard-cards">
+                    <div class="dashboard-card">
+                        <div class="card-info">
+                            <p class="card-title">Total de Livros</p>
+                            <h2 id="total-books">0</h2>
+                        </div>
+                        <img src="../../assets/icons/bookClosed.svg" alt="Ícone de livros">
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="card-info">
+                            <p class="card-title">Empréstimos Ativos</p>
+                            <h2 id="active-rentals">0</h2>
+                        </div>
+                        <img src="../../assets/icons/Page.svg" alt="Ícone de empréstimos">
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="card-info">
+                            <p class="card-title">Empréstimos ao Mês</p>
+                            <h2 id="monthly-rentals">0</h2>
+                        </div>
+                        <img src="../../assets/icons/PayDate.svg" alt="Ícone de calendário">
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="card-info">
+                            <p class="card-title">Alertas Críticos de Atraso</p>
+                            <h2 id="critical-alerts">0</h2>
+                        </div>
+                        <img src="../../assets/icons/Error.svg" alt="Ícone de alerta">
+                    </div>
+                </div>
                 <div class="dashboard-table-container">
                     <table class="dashboard-table" id="dashboard-table-function">
                         <thead>
@@ -68,9 +99,7 @@
                                 <th>Ações</th>
                             </tr>
                         </thead>
-                        <tbody id="dashboard-table">
-
-                        </tbody>
+                        <tbody id="dashboard-table"></tbody>
                     </table>
                 </div>
             </div>
