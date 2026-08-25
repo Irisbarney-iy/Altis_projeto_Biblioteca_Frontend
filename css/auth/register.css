@@ -11,7 +11,7 @@
     min-height: 100vh;
 }
 
-.login{
+.register{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,11 +20,11 @@
     padding: 30px;
     background-color: #FFF3D8;
     border-top: solid 6px #B15505;
-    border-right: solid 6px #B15505;
+    border-left: solid 6px #B15505;
     border-bottom: solid 6px #B15505;
 }
 
-.login h1{
+.register h1{
     color: #B15505;
     font-size: 32px;
     margin-bottom: 45px;
@@ -60,9 +60,10 @@
     right: 12px;
     top: 50%;
     transform: translateY(-60%);
+
 }
 
-.ocult-icon{
+.ocult-icon, .ocult-icon-confirm{
     width: 20px;
     right: 12px;
 }
@@ -85,43 +86,6 @@
     font-size: 14px;
 }
 
-.forget-password a{
-    color: #b15505b1;
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.forget-password a:hover{
-    text-decoration: underline;
-}
-
-.remember{
-    margin-top: 20px;
-    font-size: 14px;
-    color: #B15505;
-}
-
-.remember input{
-    cursor: pointer;
-    margin-right: 5px;
-    appearance: none;
-    background-color: #FFF3D8;
-    border: 2px solid #B15505;
-    width: 20px;
-    height: 20px;
-}
-
-.remember input:checked{
-    background-color: #B15505;
-}
-
-.remember label{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
 .btns{
     display: flex;
     justify-content: space-around;
@@ -129,7 +93,7 @@
     margin-top: 20px;
 }
 
-.btn-clear, .btn-login{
+.btn-clear, .btn-register{
     padding: 10px 20px;
     width: 30%;
     border-radius: 15px;
@@ -143,7 +107,7 @@
     border: 2px solid #B15505;
 }
 
-.btn-login{
+.btn-register{
     background-color: #B15505;
     color: #FFF3D8;
     border: 2px solid #B15505;
