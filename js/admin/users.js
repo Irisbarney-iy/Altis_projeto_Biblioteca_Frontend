@@ -167,8 +167,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // parte pra abrir o menu, o de opções
     const modal = document.getElementById('menu-modal-function');
     const configurations = document.querySelector('.configurations');
+    const preferences = document.querySelector('.preferences');
+
     configurations.addEventListener('click', () => {
         modal.classList.toggle('active');
+    });
+
+    preferences.addEventListener('click', () => {
+        window.location.href = 'preferences.html';
     });
 
     // toda a parte do menu funcionau, o lateral

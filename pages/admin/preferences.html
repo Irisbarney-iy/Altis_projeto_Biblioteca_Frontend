@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../assets/favicons/android-chrome-512x512.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../../css/admin/preferences.css">
+    <title>BibliotecaBooks</title>
+</head>
+<body>
+    <div class="content">
+        <header class="header">
+            <div class="logotype-container">
+                <img class="logo-icon" alt="icone de livro" src="../../assets/icons/OpenBook.svg">
+                <h1 class="logo-text">
+                    BibliotecaBooks
+                </h1>
+            </div>
+            <a href="dashboard.html" class="back-button">
+                <img src="../../assets/icons/Undo.svg" alt="Voltar">
+            </a>
+        </header>
+        <main class="main">
+            <span class="main-title">
+                <p>PREFERÊNCIAS</p>
+            </span>
+            <div class="main-content">
+                <div class="preferences-container">
+                    <div class="preferences-header">
+                        <h2>Preferências</h2>
+                        <p>
+                            Personalize sua experiência
+                        </p>
+                    </div>
+                    <div class="preference-option">
+                        <div class="preference-info">
+                            <p class="preference-title">
+                                Alternar idioma
+                            </p>
+                            <p class="preference-description">
+                                Escolha o idioma que deseja utilizar no sistema
+                            </p>
+                        </div>
+                        <select id="language-select">
+                            <option value="pt-BR">
+                                Português (Brasil)
+                            </option>
+                            <option value="en">
+                                Inglês
+                            </option>
+                            <option value="es">
+                                Espanhol
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../js/admin/preferences.js"></script>
+</body>
+</html>

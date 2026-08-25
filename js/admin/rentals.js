@@ -359,8 +359,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // menu usuário
     const modal = document.getElementById('menu-modal-function');
     const configurations = document.querySelector('.configurations');
+    const preferences = document.querySelector('.preferences');
+
     configurations.addEventListener('click', () => {
         modal.classList.toggle('active');
+    });
+
+    preferences.addEventListener('click', () => {
+        window.location.href = 'preferences.html';
     });
 
     // menu lateral

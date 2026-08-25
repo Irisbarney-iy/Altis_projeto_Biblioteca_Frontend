@@ -130,9 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const modal = document.getElementById('menu-modal-function');
     const configurations = document.querySelector('.configurations');
+    const preferences = document.querySelector('.preferences');
 
     configurations.addEventListener('click', () => {
         modal.classList.toggle('active');
+    });
+
+    preferences.addEventListener('click', () => {
+        window.location.href = 'preferences.html';
     });
     const content = document.getElementById('content-function');
     const menuOcult = document.getElementById('menu-function');
